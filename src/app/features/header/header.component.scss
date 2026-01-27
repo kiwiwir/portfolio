@@ -1,5 +1,5 @@
 .header {
-  background-color: #f1e8c7;
+  background-color: #e6d29d;
   width: 100%;
   height: 50px;
   padding: 0 20px;
@@ -19,7 +19,7 @@
   right: 20px;
 
   height: 2px;
-  background-color: #9ca764;
+  background-color: #6a8149;
   border-radius: 2px;
   opacity: 0.8;
 }
@@ -39,7 +39,6 @@
 .nav-btn {
   background: transparent;
   border: none;
-  color: #473f34;
   font-family: "Funnel_Display";
   font-size: 15px;
   font-weight: 400;
@@ -56,7 +55,7 @@
 
 /* fake bold */
 .nav-btn:hover {
-  background-color: rgba(156, 167, 100, 0.5);
+  background-color: rgba(106, 129, 73, 0.5);
   text-shadow: 0.75px 0 0 currentColor;
 
   transform: translateY(-1px);
@@ -64,7 +63,7 @@
 }
 
 .nav-btn.active {
-  background-color: #9ca764;
+  background-color: #6a8149;
   text-shadow: 0.75px 0 0 currentColor;
 
   transform: translateY(-1px);
