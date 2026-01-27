@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Mynerve";
+  src: url("assets/fonts/Mynerve/Mynerve-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Schoolbell";
+  src: url("assets/fonts/Schoolbell/Schoolbell-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Funnel_Display";
+  src: url("assets/fonts/Funnel_Display/FunnelDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0e5c7;
+  color: #473f34;
+  font-family: "Funnel_Display";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-layout {
+  display: flex;
+  height: calc(100vh - 60px); // 60px to wysokość headera
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
