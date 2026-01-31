@@ -1,146 +1,47 @@
-.home-container {
-  min-height: 100%;
-  display: flex;
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  padding: 6vw;
   align-items: center;
-  justify-content: center;
-  gap: 80px;
-
-  padding: 40px;
-  color: #000000;
 }
 
-/* LEWA STRONA */
-.home-left {
-  max-width: 480px;
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left img {
+  width: 420px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.right {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+
+  transform: translateX(60px);
 }
 
 .title {
-  font-size: 5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 400;
   margin: 0;
-  font-family: "Mynerve";
+  line-height: 1.1;
 }
 
-.text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 0;
-
-  text-align: justify;
-  text-justify: inter-word;
-}
-.btn-group {
-  display: flex;
-  gap: 16px; // odstęp między przyciskami
-  margin-top: 10px; // odstęp od tekstu wyżej
+.year {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.2rem;
+  margin: -0.4rem 0 1.2rem;
+  opacity: 0.9;
 }
 
-.btn {
-  align-self: flex-start;
-
-  margin-top: 10px;
-  padding: 10px 22px;
-
-  background-color: #6a8149;
-  border: none;
-  border-radius: 999px;
-
-  color: #000000;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: bold;
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* PRAWA STRONA */
-.home-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-}
-
-.portrait {
-  width: 260px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 16px 16px 0 0;
-}
-
-.contact {
-  width: 260px;
-  padding: 24px 24px;
-  background-color: #000000;
-  border-radius: 0 0 16px 16px;
-
-  h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-family: Mynerve;
-    color: #ffffff;
-  }
-
-  p {
-    margin: 6px 0 0;
-    font-size: 0.95rem;
-    color: #ffffff;
-  }
-}
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  margin: 6px 0;
-  font-size: 0.95rem;
-  color: #ffffff;
-}
-.copyable {
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.copyable:hover {
+.name {
+  font-family: "Famulred";
+  font-size: 1.2rem;
   opacity: 0.7;
-}
-
-.icon {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-
-.toast {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background-color: #6a8149;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 999px;
-  opacity: 0;
-  pointer-events: none;
-
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
 }

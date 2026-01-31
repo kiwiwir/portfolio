@@ -10,17 +10,4 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
   imagePath: string = 'images/placeholderportrait.jpg';
-  toastVisible = false;
-
-  copyToClipboard(text: string) {
-    navigator.clipboard.writeText(text);
-    this.showToast();
-  }
-
-  showToast() {
-    this.toastVisible = true;
-    setTimeout(() => {
-      this.toastVisible = false;
-    }, 2000);
-  }
 }

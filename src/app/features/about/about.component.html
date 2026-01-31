@@ -1,1 +1,176 @@
-<p>about works!</p>
+<div class="about-container">
+  <!--#region LEWA KOLUMNA -->
+  <aside class="left-column">
+    <img src="images/portrait.jpeg" alt="Portrait" class="profile-image" />
+
+    <h1 class="name">Pola Grzybowska</h1>
+
+    <h2 class="left-section-title">PROFILE</h2>
+    <div class="profile-info">
+      <div class="info-row">
+        <svg class="icon">
+          <use href="assets/icons/birthday-cake.svg"></use>
+        </svg>
+        <span>12-06-2000</span>
+      </div>
+
+      <div class="info-row">
+        <svg class="icon">
+          <use href="assets/icons/marker.svg"></use>
+        </svg>
+        <span>Koszalin, Poland</span>
+      </div>
+    </div>
+
+    <h2 class="left-section-title">CONTACT</h2>
+    <div class="profile-info">
+      <div
+        class="info-row copyable"
+        (click)="copyToClipboard('514439972', 'Phone number copied!')"
+      >
+        <svg class="icon">
+          <use href="assets/icons/phone.svg"></use>
+        </svg>
+        <span>(48+) 514 439 972</span>
+      </div>
+
+      <div
+        class="info-row copyable"
+        (click)="copyToClipboard('poleczkag6@gmail.com', 'Email copied!')"
+      >
+        <svg class="icon">
+          <use href="assets/icons/mail.svg"></use>
+        </svg>
+        <span>poleczkag6&#64;gmail.com</span>
+      </div>
+    </div>
+
+    <h2 class="left-section-title">HOBBIES</h2>
+
+    <div class="hobbies-grid">
+      <div class="hobby-item">
+        <svg class="hobby-icon" viewBox="0 0 64 64">
+          <use href="assets/icons/art.svg"></use>
+        </svg>
+        <span>Digital art</span>
+      </div>
+
+      <div class="hobby-item">
+        <svg class="hobby-icon">
+          <use href="assets/icons/crochet.svg"></use>
+        </svg>
+        <span>Crochet</span>
+      </div>
+
+      <div class="hobby-item">
+        <svg class="hobby-icon">
+          <use href="assets/icons/games.svg"></use>
+        </svg>
+        <span>Games</span>
+      </div>
+
+      <div class="hobby-item">
+        <svg class="hobby-icon">
+          <use href="assets/icons/book.svg"></use>
+        </svg>
+        <span>Fantasy books</span>
+      </div>
+    </div>
+
+    <h2 class="left-section-title">LANGUAGES</h2>
+    <div class="profile-info">
+      <div class="info-row">
+        <svg class="icon">
+          <use href="assets/icons/star.svg"></use>
+        </svg>
+        <span><b>Polish</b> – fluent</span>
+      </div>
+      <div class="info-row">
+        <svg class="icon">
+          <use href="assets/icons/star.svg"></use>
+        </svg>
+        <span><b>English</b> – B2</span>
+      </div>
+      <div class="info-row">
+        <svg class="icon">
+          <use href="assets/icons/star.svg"></use>
+        </svg>
+        <span><b>German</b> – A2</span>
+      </div>
+      <div class="info-row">
+        <svg class="icon">
+          <use href="assets/icons/star.svg"></use>
+        </svg>
+        <span><b>Russian</b> – basics</span>
+      </div>
+    </div>
+  </aside>
+  <!--#endregion -->
+
+  <!--#region PRAWA KOLUMNA -->
+  <section class="right-column">
+    <div class="right-section hello">
+      <h3 class="right-section-title">HELLO!</h3>
+      <p>
+        My name is Pola. I want to study game development to deepen my skills
+        and because of my strong interest in narrative-driven and atmospheric
+        games. My strengths are persistence, attention to detail and quick
+        learning. Creating interactive experiences allows me to combine
+        programming with my artistic skills. I especially enjoy fantasy worlds,
+        cozy pixel-art games, and narrative-driven projects with deep lore.
+        <br />
+        I am a self-taught artist, working mainly in digital semi-realistic and
+        anime art styles using Clip Studio Paint. Recently, I have also been
+        exploring pixel art and simple animations in Aseprite. I am currently
+        learning Unity 2D and C#, and I am interested in expanding my skills in
+        game design and programming.
+        <br />
+        In addition to IT, I have a background in mechatronics and basic
+        knowledge of electronics. I have experience working with Arduino and
+        Raspberry Pi, which has helped me understand the connection between
+        software and hardware. In the future, I would like to learn more about
+        3D modeling in Blender and Unreal Engine. I also have basic experience
+        with front-end development.
+        <br />
+        <br />
+        Hope you enjoy my portfolio!
+      </p>
+    </div>
+
+    <div class="right-section education">
+      <h2 class="right-section-title">EDUCATION</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+
+    <div class="right-section skills">
+      <h2 class="right-section-title">SKILLS</h2>
+      <p></p>
+    </div>
+
+    <div class="right-section experience">
+      <h2 class="right-section-title">EXPERIENCE</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+  </section>
+
+  <!--#endregion -->
+  <div class="toast" [class.show]="toastVisible">
+    {{ toastMessage }}
+  </div>
+</div>
