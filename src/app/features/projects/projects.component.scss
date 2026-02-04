@@ -1,0 +1,110 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* KARTA PROJEKTU */
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+
+  background-color: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+/* LEWA STRONA */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 60%;
+}
+
+.project-title {
+  font-family: "JetBrains_Mono", monospace;
+  font-size: 1.6rem;
+  margin: 0;
+  color: #323641;
+}
+
+.project-description {
+  font-family: "Fragment_Mono", monospace;
+  font-size: 0.85rem;
+  margin: 0;
+  color: #323641;
+  line-height: 1.5;
+}
+
+/* PRAWA STRONA */
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.image-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.image-button img {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.button-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #d2e06e;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-family: "JetBrains_Mono";
+  font-size: 15px;
+  font-weight: 400;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-1px);
+  text-decoration: underline;
+}
+
+.nav-btn.active {
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-info {
+    max-width: 100%;
+  }
+
+  .image-button img {
+    max-width: 100%;
+  }
+}

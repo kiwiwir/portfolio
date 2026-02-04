@@ -135,10 +135,6 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
-
-.right-column {
-  padding: 3rem;
-}
 /*#endregion*/
 /*#region right*/
 .right-column {
@@ -171,7 +167,7 @@
 /* Szeroki ekran: dwie kolumny */
 @media (min-width: 768px) {
   .right-column {
-    grid-template-columns: 1.25fr 0.75fr;
+    grid-template-columns: 1.1fr 0.9fr;
     grid-template-areas:
       "hello skills"
       "education experience";
@@ -182,6 +178,8 @@
   background-color: #f8f8f8;
   padding: 1rem;
   border-radius: 8px;
+  font-family: "Fragment_Mono", monospace;
+  font-size: 0.85rem;
 }
 
 .right-section h2 {
@@ -204,6 +202,35 @@
   font-size: 0.85rem;
   line-height: 1.5;
   color: #323641;
+  margin-bottom: 0.5rem;
+}
+.skills-button-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #d2e06e;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-family: "JetBrains_Mono";
+  font-size: 15px;
+  font-weight: 400;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
 }
 
+.nav-btn:hover {
+  transform: translateY(-1px);
+  text-decoration: underline;
+}
+
+.nav-btn.active {
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
 /*#endregion*/

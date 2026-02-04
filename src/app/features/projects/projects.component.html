@@ -1,1 +1,24 @@
-<p>projects works!</p>
+<div class="projects-container">
+  <div class="project-card" *ngFor="let project of projects">
+    <div class="project-info">
+      <h2 class="project-title">
+        {{ project.title }}
+      </h2>
+      <p class="project-description">
+        {{ project.description }}
+      </p>
+      <div class="button-wrapper">
+        <button
+          class="nav-btn projects-btn"
+          [routerLink]="['/projects', project.id]"
+        >
+          View details about this project →
+        </button>
+      </div>
+    </div>
+
+    <button class="image-button" [routerLink]="['/projects', project.id]">
+      <img [src]="project.image" [alt]="project.title" />
+    </button>
+  </div>
+</div>
