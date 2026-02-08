@@ -1,10 +1,53 @@
-<div class="project-details">
-  <a routerLink="/projects" class="back-link"> ← Back to projects </a>
+<div class="project-details" *ngIf="project">
+  <!-- Back button -->
+  <button class="back-button" (click)="backToProjects()">
+    ← Back to projects
+  </button>
 
-  <h1>Project {{ projectId }}</h1>
+  <!-- Project header -->
+  <h1 class="project-title">{{ project.title }}</h1>
 
-  <p>
-    This is a placeholder page for project {{ projectId }}. Detailed description
-    coming soon.
-  </p>
+  <!-- Intro section -->
+  <div class="card">
+    <p class="intro">
+      {{ project.details.intro }}
+    </p>
+  </div>
+
+  <!-- Sections -->
+  <div
+    class="card section-card"
+    *ngFor="let section of project.details.sections"
+  >
+    <div class="section-content">
+      <!-- Text -->
+      <div class="text">
+        <h2>{{ section.heading }}</h2>
+        <p>{{ section.content }}</p>
+      </div>
+
+      <!-- Image (only if exists) -->
+      <div class="images" *ngIf="section.images?.length">
+        <div
+          class="img-wrapper"
+          *ngFor="let img of section.images; let i = index"
+        >
+          <img [src]="img" [alt]="section.heading" />
+          <div class="caption">Figure {{ getFigureNumber() }}</div>
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div class="text">
+        <p>{{ section.caption }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outro (optional) -->
+  <div class="card" *ngIf="project.details.outro">
+    <p class="outro">
+      {{ project.details.outro }}
+    </p>
+  </div>
 </div>
