@@ -35,7 +35,7 @@ body {
 
 .main-layout {
   display: flex;
-  height: calc(100vh - 50px); // 50px to wysokość headera
+  height: calc(100vh - 80px); // 50px to wysokość headera + 25px footera
 }
 
 .main-content {

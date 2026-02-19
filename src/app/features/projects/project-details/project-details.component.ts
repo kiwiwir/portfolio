@@ -14,6 +14,8 @@ export class ProjectDetailsComponent implements OnInit {
   project: Project | undefined;
   figureCounter = 0;
 
+  selectedImage: string | null = null;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -34,5 +36,13 @@ export class ProjectDetailsComponent implements OnInit {
 
   backToProjects() {
     this.router.navigate(['/projects']);
+  }
+
+  openImage(img: string) {
+    this.selectedImage = img;
+  }
+
+  closeImage() {
+    this.selectedImage = null;
   }
 }

@@ -6,6 +6,8 @@
 
   <!-- Project header -->
   <h1 class="project-title">{{ project.title }}</h1>
+  <!-- Project subtitle -->
+  <h2 class="project-subtitle">{{ project.subtitle }}</h2>
 
   <!-- Intro section -->
   <div class="card">
@@ -23,7 +25,26 @@
       <!-- Text -->
       <div class="text">
         <h2>{{ section.heading }}</h2>
-        <p>{{ section.content }}</p>
+        <p [innerHTML]="section.content"></p>
+        <!-- IFRAME only for project 2 -->
+        <div
+          *ngIf="
+            project.id === 2 &&
+            section.heading === 'Project Repository and Playable Version'
+          "
+          class="itch-embed"
+        >
+          <iframe
+            frameborder="0"
+            src="https://itch.io/embed/4303744?linkback=true"
+            width="552"
+            height="167"
+          >
+            <a href="https://kiwiwir.itch.io/marbles-adventure">
+              Marble's Adventure by kiwiwir
+            </a>
+          </iframe>
+        </div>
       </div>
 
       <!-- Image (only if exists) -->
@@ -32,7 +53,13 @@
           class="img-wrapper"
           *ngFor="let img of section.images; let i = index"
         >
-          <img [src]="img" [alt]="section.heading" />
+          <img
+            [src]="img"
+            [alt]="section.heading"
+            (click)="openImage(img)"
+            class="clickable"
+          />
+
           <div class="caption">Figure {{ getFigureNumber() }}</div>
         </div>
       </div>
@@ -50,4 +77,13 @@
       {{ project.details.outro }}
     </p>
   </div>
+</div>
+
+<!-- IMAGE MODAL -->
+<div class="image-modal" *ngIf="selectedImage" (click)="closeImage()">
+  <img
+    [src]="selectedImage"
+    class="modal-image"
+    (click)="$event.stopPropagation()"
+  />
 </div>
