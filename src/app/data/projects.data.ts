@@ -390,4 +390,56 @@ export const PROJECTS: Project[] = [
         'This page shows my creative background, ability to learn tools independently, and experience in combining art with technical projects such as games and applications.',
     },
   },
+  {
+    id: 4,
+    title: '4. Other Projects',
+    main_image: 'assets/images/project4.jpg',
+    description:
+      'This section presents smaller projects that I created alongside my main works.',
+    details: {
+      intro:
+        'This section presents smaller projects that I created alongside my main works.',
+      sections: [
+        {
+          heading: 'Angular Portfolio Website',
+          content:
+            'This portfolio website was designed and developed by me using Angular. The application is built using Angular standalone components and routing. The structure is modular, with separate components for the header, footer, home page, about section, project list, and detailed project views. Each project is dynamically loaded based on its ID using Angular routing and a data-driven structure.\n\n' +
+            'The Projects section uses reusable components and a centralized data file, which allows me to easily add new projects without modifying the main structure of the application. The website serves not only as a presentation platform but also as a practical example of my ability to design and implement a web application using Angular.',
+          images: [
+            'assets/images/project4/project4_1.jpg',
+            'assets/images/project4/project4_2.jpg',
+          ],
+        },
+        {
+          heading: '2D Platformer Prototype (Unity - in development)',
+          content:
+            'This project is a 2D platformer game prototype currently in development in Unity. The main goal of this small project is to better understand character physics, movement mechanics, and platformer game design.\n\n' +
+            'So far, I have implemented a player movement system using Rigidbody2D. The character can move horizontally across tile-based platforms and flip direction depending on movement input. I also implemented a jump system with variable jump height, which allows the player to control how high the character jumps by holding the jump button.',
+          images: ['assets/images/project4/project4_3.gif'],
+        },
+        {
+          heading: 'Team Project - Tea Brewing Game',
+          content:
+            'During my studies, I participated in a team project organized as part of an internship for GlobalLogic. I worked in a team of six people, and together we developed a game prototype in Unity focused on tea brewing mechanics.\n\n' +
+            'We worked in an agile environment, using GitHub for version control and collaboration, and Jira for task management. We maintained a backlog, planned our work in advance, and completed five two-week sprints.\n\n' +
+            'The game we created was a prototype of a tea brewing simulator. The player could talk to customer and receive quest to prepare specific type of tea. After accepting a quest, the player could check the recipe in a recipe book.\n\n' +
+            'The gameplay included:\n' +
+            '- selecting the correct ingredients and adding them to the inventory,\n' +
+            '- filling a kettle with water,\n' +
+            '- heating the water to a selected temperature (with a small mini-game that made the process more challenging),\n' +
+            '- adding ingredients in the correct order.\n' +
+            'If the player followed the recipe correctly, the tea was successfully prepared and could be served to the customer. If not, the tea would fail, encouraging the player to pay attention to details.\n\n' +
+            'In this project, I was mainly responsible for: creating furniture assets for the game world, designing and implementing the inventory system, handling item creation and logic related to adding items to the inventory, implementing in-game items and managing their data, overseeing version control in GitHub and helping maintain repository structure and workflow consistency.\n\n' +
+            'This project allowed me to gain experience in team game development, agile workflow, sprint planning, and collaborative version control.',
+          images: [
+            'assets/images/project4/project4_4.jpg',
+            'assets/images/project4/project4_5.gif',
+            'assets/images/project4/project4_6.gif',
+            'assets/images/project4/project4_7.gif',
+            'assets/images/project4/project4_8.gif',
+          ],
+        },
+      ],
+    },
+  },
 ];
