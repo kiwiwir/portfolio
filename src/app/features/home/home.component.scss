@@ -1,47 +1,121 @@
 .home {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  padding: 6vw;
-  align-items: center;
-}
-
-.left {
+  position: relative;
+  min-height: 90vh;
   display: flex;
   align-items: center;
-}
-
-.left img {
-  width: 420px;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  color: #323641;
+}
 
-  transform: translateX(60px);
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.content {
+  text-align: center;
+  z-index: 2;
 }
 
 .title {
-  font-family: "JetBrains Mono", monospace;
-  font-size: clamp(3.5rem, 6vw, 5rem);
-  font-weight: 400;
+  font-family: "JetBrains_Mono", monospace;
+  font-size: 5rem;
   margin: 0;
-  line-height: 1.1;
+  animation: fadeSlideDown 0.8s ease forwards;
 }
 
 .year {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 2.2rem;
-  margin: -0.4rem 0 1.2rem;
-  opacity: 0.9;
+  font-family: "JetBrains_Mono", monospace;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .name {
-  font-family: "Famulred";
-  font-size: 1.2rem;
-  opacity: 0.7;
+  font-family: "Fragment_Mono", monospace;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.cta-btn {
+  background-color: #d2e06e;
+  border: none;
+  font-family: "JetBrains_Mono", monospace;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.illustration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 60vh;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  animation: slideInRight 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .year {
+    font-size: 1.5rem;
+  }
+
+  .illustration {
+    max-height: 40vh;
+    opacity: 0.7;
+  }
 }

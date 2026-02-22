@@ -9,5 +9,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  imagePath: string = 'images/placeholderportrait.jpg';
+  imagePath = 'assets/images/home_illustration.png';
 }

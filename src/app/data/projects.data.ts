@@ -404,7 +404,8 @@ export const PROJECTS: Project[] = [
           heading: 'Angular Portfolio Website',
           content:
             'This portfolio website was designed and developed by me using Angular. The application is built using Angular standalone components and routing. The structure is modular, with separate components for the header, footer, home page, about section, project list, and detailed project views. Each project is dynamically loaded based on its ID using Angular routing and a data-driven structure.\n\n' +
-            'The Projects section uses reusable components and a centralized data file, which allows me to easily add new projects without modifying the main structure of the application. The website serves not only as a presentation platform but also as a practical example of my ability to design and implement a web application using Angular.',
+            'The Projects section uses reusable components and a centralized data file, which allows me to easily add new projects without modifying the main structure of the application. The website serves not only as a presentation platform but also as a practical example of my ability to design and implement a web application using Angular.\n\n' +
+            'Repository for this project is available on my GitHub profile: <a href="https://github.com/kiwiwir/portfolio" target="_blank">Portfolio GitHub Repository</a>',
           images: [
             'assets/images/project4/project4_1.jpg',
             'assets/images/project4/project4_2.jpg',
@@ -414,7 +415,8 @@ export const PROJECTS: Project[] = [
           heading: '2D Platformer Prototype (Unity - in development)',
           content:
             'This project is a 2D platformer game prototype currently in development in Unity. The main goal of this small project is to better understand character physics, movement mechanics, and platformer game design.\n\n' +
-            'So far, I have implemented a player movement system using Rigidbody2D. The character can move horizontally across tile-based platforms and flip direction depending on movement input. I also implemented a jump system with variable jump height, which allows the player to control how high the character jumps by holding the jump button.',
+            'So far, I have implemented a player movement system using Rigidbody2D. The character can move horizontally across tile-based platforms and flip direction depending on movement input. I also implemented a jump system with variable jump height, which allows the player to control how high the character jumps by holding the jump button.\n\n' +
+            'Repository for this project is available on my GitHub profile: <a href="https://github.com/kiwiwir/Jumping_Cat" target="_blank">Jumping Cat GitHub Repository</a>',
           images: ['assets/images/project4/project4_3.gif'],
         },
         {
