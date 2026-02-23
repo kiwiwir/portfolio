@@ -133,13 +133,13 @@
 
 .toast.show {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(-20px);
 }
 /*#endregion*/
 /*#region right*/
 .right-column {
   display: grid;
-  grid-template-columns: 1fr; /* wąski ekran: jedna kolumna */
+  grid-template-columns: 1fr;
   grid-template-areas:
     "hello"
     "education"
@@ -164,7 +164,6 @@
   grid-area: experience;
 }
 
-/* Szeroki ekran: dwie kolumny */
 @media (min-width: 768px) {
   .right-column {
     grid-template-columns: 1.1fr 0.9fr;

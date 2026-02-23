@@ -1,6 +1,6 @@
 <div class="project-details" *ngIf="project">
   <!-- Back button -->
-  <button class="back-button" (click)="backToProjects()">
+  <button class="back-button" (click)="backToProjects()" *ngIf="!selectedImage">
     ← Back to projects
   </button>
 
@@ -60,7 +60,7 @@
             class="clickable"
           />
 
-          <div class="caption">Figure {{ getFigureNumber() }}</div>
+          <div class="caption">Figure {{ figureMap.get(img) }}</div>
         </div>
       </div>
 

@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectDetailsComponent implements OnInit {
   project: Project | undefined;
-  figureCounter = 0;
+  figureMap = new Map<string, number>();
 
   selectedImage: string | null = null;
 
@@ -26,12 +26,17 @@ export class ProjectDetailsComponent implements OnInit {
     this.project = PROJECTS.find((p) => p.id === id);
 
     if (this.project) {
-      this.figureCounter = 0;
+      this.generateFigureNumbers();
     }
   }
-  getFigureNumber(): number {
-    this.figureCounter += 1;
-    return this.figureCounter;
+  private generateFigureNumbers() {
+    let counter = 1;
+
+    this.project?.details.sections.forEach((section) => {
+      section.images?.forEach((img) => {
+        this.figureMap.set(img, counter++);
+      });
+    });
   }
 
   backToProjects() {
